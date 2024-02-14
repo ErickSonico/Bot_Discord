@@ -31,10 +31,10 @@ def run_discordBot():
 
         print(f'{username} en {channel} dijo: {user_message}')
 
-        if user_message[0:3] == 'uwu': 
+        if user_message[0:3] == '343': 
             user_message = user_message[3:]
             # Cambiar a false para que responda en el canal donde se mandó el mensaje
-            await send_message(message, user_message, is_private=False)
+            await send_message(message, user_message, is_private=True)
         else:
             await send_message(message, user_message, is_private=False)
 

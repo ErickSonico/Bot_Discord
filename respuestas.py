@@ -21,7 +21,10 @@ def get_response(message:str)->str:
         return '¡Por supuesto! te recomiendo esta ' + random.choice(novelas)
     
     if 'favorito' in mensaje and 'juego' in mensaje:
-        return 'Mi juego favorito es ' + juegos[0]
+        return 'Mi juego favorito es ' + juegos[0] + 'y el tuyo?'
+    
+    if mensaje in juegos:
+        return '¡Ese es un gran juego!'
     
     if 'juegos' in mensaje and 'orden' in mensaje:
         return 'El orden de los juegos es:\n' + '\n'.join(juegos)

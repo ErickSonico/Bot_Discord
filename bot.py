@@ -1,9 +1,13 @@
 import discord
-import respuestas
+import sys
+sys.path.append("./BaseChatBotREGEX")
+from BaseChatBotREGEX.ChatBot import ChatBot
+
+chatbot = ChatBot()
 
 # message es un json que contiene el mensaje que el usuario envió y sus datos
 async def send_message(message, user_message, is_private):
-    response = respuestas.get_response(user_message)
+    response = chatbot.responder(user_message)
     await message.author.send(response) if is_private else await message.channel.send(response)
 
 

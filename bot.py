@@ -8,7 +8,7 @@ async def send_message(message, user_message, is_private):
 
 
 def run_discordBot():
-    TOKEN = ''
+    TOKEN = open('TOKEN.txt').read().strip()
     intents = discord.Intents.default()
     intents.message_content = True
     client = discord.Client(intents=intents)
@@ -18,7 +18,7 @@ def run_discordBot():
     # client.user es el bot
     @client.event
     async def on_ready():
-        print(f'{client.user} ha salido del infierno 😈')
+        print(f'{client.user} ha salido del infierno')
     
     @client.event 
     async def on_message(message):
@@ -34,7 +34,7 @@ def run_discordBot():
         if user_message[0:3] == 'uwu': 
             user_message = user_message[3:]
             # Cambiar a false para que responda en el canal donde se mandó el mensaje
-            await send_message(message, user_message, is_private=True)
+            await send_message(message, user_message, is_private=False)
         else:
             await send_message(message, user_message, is_private=False)
 

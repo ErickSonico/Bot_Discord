@@ -1,14 +1,13 @@
-import discord
 import random
 
 def get_response(message:str)->str:
     mensaje = message.lower().strip()
-    if mensaje == 'hola':
+    if 'hola' in mensaje:
         return 'Holaaaa'
     if mensaje == 'dado':
         return str(random.randint(1,6))
-    if mensaje == 'adios':
-        return 'z-u!'
+    if mensaje == 'adios' or mensaje == 'chau' or mensaje == 'bye':
+        return 'Bai, vuelve pronto!'
     if mensaje == 'como estas?':
-        return 're bien, gracias por preguntar'
-    return 'Mejor duérmete otro rato' # respuesta por defecto
+        return 'Re bien, gracias por preguntar!'
+    return 'No te entiendo, mejor duérmete otro rato zzZzz' # respuesta por defecto

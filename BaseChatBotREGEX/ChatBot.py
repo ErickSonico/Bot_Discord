@@ -79,6 +79,10 @@ class ChatBot:
             self.contexto = "JUEGO"
         elif intent == 'dato':
             self.contexto = "DATO"
+        elif intent == "negativo":
+            self.contexto = "NEGATIVO"
+        elif intent == "estado":
+            self.contexto == "ESTADO"
         elif intent == 'desconocido':
             self.contexto = "DEFAULT"  
 

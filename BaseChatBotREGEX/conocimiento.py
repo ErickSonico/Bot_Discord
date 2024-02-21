@@ -69,8 +69,24 @@ def conocimientoT():
                 r'^(que tal|como)? (estas|te sientes).*',
             ],
             'respuesta': [
-                'feliz de poder compartir contigo mi conocimiento, sobre el basto universo de Halo',
-                'emocionado de poder hablar sobre Halo',
+                'Feliz de poder compartir contigo mi conocimiento, sobre el basto universo de Halo',
+                'Emocionado de poder hablar sobre Halo',
+                'Compartir mi conocimiento sobre Halo me hacen muy feliz',
+                'Si crece tu conocimiento sobre Halo mi proposito se habra cumplido'
+            ]
+        },
+        #////////////////////////////////////////////////Emocion Negativa
+        {
+            'intnet': 'negativo',
+            'regex': [
+                r'.* me siento (mal|triste|enojado|ansioso|perdido|solo)+',
+                r'.* no me siento (bien|feliz|a gusto|trnquilo)'
+            ],
+            'respuesta': [
+                'Mi conocimiento sobre Halo debe de animarte',
+                'No debes de sentirte asi, jugar Halo te animara',
+                'Hablar sobre Halo te hara feliz',
+                'Ese sentimineto se debe de erradicar con mi concomiento sobre Halo'
             ]
         },
         #////////////////////////////////////////////////Otro.

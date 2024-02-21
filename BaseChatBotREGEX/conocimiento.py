@@ -52,9 +52,9 @@ def conocimientoT():
         },
         #////////////////////////////////////////////////Juegos.
         {
-            'intent': 'dato',
+            'intent': 'juego',
             'regex': [
-                r'.*(dime|recomienda)+ (algun|mejor juego)',
+                r'.*(dime|recomiendame)+ (un juego)',
             ],
             'respuesta': [
                 'Este es mi favorito',

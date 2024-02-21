@@ -66,10 +66,11 @@ def conocimientoT():
         {
             'intent': 'estado',
             'regex': [
-                r'^.*me siento (.*)$',
+                r'^(que tal|como)? (estas|te sientes).*',
             ],
             'respuesta': [
-                'Por que te sientes %1'
+                'feliz de poder compartir contigo mi conocimiento, sobre el basto universo de Halo',
+                'emocionado de poder hablar sobre Halo',
             ]
         },
         #////////////////////////////////////////////////Otro.

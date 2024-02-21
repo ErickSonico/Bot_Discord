@@ -98,3 +98,14 @@ def despedida(user_input):
         if i in des:
             despedida_definitiva = random.choice(despedida_glados)
     return despedida_definitiva
+
+def recomendarMusica(): 
+    '''
+    Recomienda un cancion de Halo.
+
+    :return La cancion
+    :rtype str
+    '''
+        
+
+    return 

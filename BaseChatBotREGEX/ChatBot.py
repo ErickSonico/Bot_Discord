@@ -4,7 +4,7 @@
 
 import string, re, random, sys
 from conocimiento import conocimientoT
-from ResponseFunctions import recomendarLibro, despedida, datoCurioso, recomendarJuego
+from ResponseFunctions import *
 
 class ChatBot:
     """

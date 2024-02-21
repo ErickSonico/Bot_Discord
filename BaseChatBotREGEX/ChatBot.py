@@ -4,7 +4,7 @@
 
 import string, re, random, sys
 from conocimiento import conocimientoT
-from ResponseFunctions import contar_chiste, despedida
+from ResponseFunctions import recomendarLibro, despedida
 
 class ChatBot:
     """
@@ -71,8 +71,10 @@ class ChatBot:
         intent = caso['intent']
         if intent == 'bienvenida':
             self.contexto = "BIENVENIDA"
-        elif intent == 'chiste':
-            self.contexto = "CHISTE"
+        elif intent == 'libro':
+            self.contexto = "LIBRO"
+        elif intent == 'musica':
+            self.contexto = "MUSICA"
         elif intent == 'desconocido':
             self.contexto = "DEFAULT"  
 
@@ -105,12 +107,13 @@ class ChatBot:
         :rtype: str
         '''
         intent = caso['intent']
-        if intent == 'chiste':
-            return contar_chiste()
+        if intent == 'libro':
+            return recomendarLibro()
+        elif intent == 'musica':
+            return poner_musica()
         elif intent == 'repetir':
             return self.da_respuesta_apropiada(user_input)
         elif intent == 'terminar':
-            # -------- modificar esto de aqui para que el bot no muera --------
             print(despedida(user_input))
             sys.exit(0)
         return ''
@@ -124,8 +127,10 @@ class ChatBot:
         :return Texto que representa la respuesta
         :rtype str
         '''
-        if self.contexto == 'CHISTE':
-            return 'Aquí va otro: ' + contar_chiste()
+        if self.contexto == 'LIBRO':
+            return 'Aquí va otro: ' + recomendarLibro()
+        elif self.contexto == 'MUSICA':
+            return 'Aquí va otro: ' + poner_musica()
         elif self.contexto == 'DEFAULT':
             return '¿Podrías tratar de expresarte mejor?'
         else:

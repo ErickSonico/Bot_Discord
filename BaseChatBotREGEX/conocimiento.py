@@ -23,20 +23,19 @@ def conocimientoT():
                 r'.*buen(a|o)s (dias|tardes|noches).*',
             ],
             'respuesta': [
-                'Ah, Hola... ',
-                'Hola, soy una IA de conversación.'
+                'Holaaaa',
+                'Hola, soy una IA de conversación sobre Halo.'
             ]
         },
         #////////////////////////////////////////////////Chiste.
         {
-            'intent': 'chiste',
+            'intent': 'libro',
             'regex': [
-                r'.*chiste.*',
-                r'.*broma.*'
+                r'.*(recomienda)+ (un libro|una novela)',
             ],
             'respuesta': [
-                'Bien',
-                'Ahí te va'
+                'Te recomiendo',
+                'Te podria gustar'
             ]
         },
         #////////////////////////////////////////////////Chiste.
@@ -48,19 +47,30 @@ def conocimientoT():
             'respuesta': [
                 'Por que te sientes %1'
             ]
-        }, 
-        
+        },
         #////////////////////////////////////////////////Otro.
         {
             'intent': 'repetir',
             'regex': [
-                r'.*otro.*',
+                r'.*(cuentame|dime|saca)* otr(o|a).*',
+                r'.*otr(o|a).*',
             ],
             'respuesta': [
                 'Bueno...'
             ]
-        }, 
-        
+        },
+        #////////////////////////////////////////////////Otro.
+        {
+            'intent': 'musica',
+            'regex': [
+                r'.*(pon|reproduce|toca|recomienda)+ (musica|una cancion)',
+            ],
+            'respuesta': [
+                'Ahí te va',
+                'Esta es mi favorita:',
+                'Aquí tienes'
+            ]
+        },
         #////////////////////////////////////////////////Fin.
         {
             'intent': 'terminar',
@@ -74,7 +84,6 @@ def conocimientoT():
                 ''
             ]
         },
-        
         #////////////////////////////////////////////////Cualquier caso no contemplado.
         {
             'intent': 'desconocido',

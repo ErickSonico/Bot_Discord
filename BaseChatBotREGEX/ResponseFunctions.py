@@ -2,22 +2,43 @@ import os, time, string, random, re
 from random import randrange
 
 
-def contar_chiste():
+def recomendarLibro():
     '''
-    Cuenta un chiste de forma aleatoria
+    Eligue un libro de forma aleatoria.
 
-    :return El chiste que se va a contar
+    :return El libro
     :rtype str
     '''
-    chistes = [
-        'Hay dos personas en un restaurante:\nX-Camarero, traigame una fanta de naranja\nM.-Lo siento señor, no nos queda Fanta, ¿Le va bien un Kas?\nX-Está bien.\nDespués de un rato, el camarero vulve con una fanta. ¿Cómo se llamó el videojuego? \nAl Final Fanta sí.\n', 
-        '¿Cuál es el mejor juego de terror de la Wii?\n La Wiija. XD XD XD',
-        'Se abre el telón y sale Leonardo Dantés muy constipado. ¿Como se llama el videojuego? Dantés Enfermo.',
-        'Esto es una consola de Nintendo sin juegos de Mario. ¿Cómo se llama la película?: "Misión imposible"',
-        'Esto es una encuesta de a ver que boss de FF es mas difícil y gana artemisa.'
-    ]
-    chiste = random.choice(chistes)
-    return chiste
+    libros = ['Halo: Cryptum',
+           'Halo: Primordium',
+           'Halo: Silentium',
+           'Halo: Fall Of Reach',
+           'Halo: The Flood',
+           'Halo: First Strike',
+           'Halo: Ghosts of Onyx',
+           'Halo: Contact Harvest',
+           'Halo: The Cole Protocol',
+           'Halo: Broken Circle',
+           'Halo: New Blood',
+           'Halo: Hunters in the Dark',
+           'Halo: Saint\'s Testimony',
+           'Halo: Last Light',
+           'Halo: Shadow of Intent',
+           'Halo: Smoke and Shadow',
+           'Halo: Envoy',
+           'Halo: Retribution',
+           'Halo: Legacy of Onyx',
+           'Halo: Bad Blood',
+           'Halo: Renegades',
+           'Halo: Oblivion',
+           'Halo: Shadows of Reach',
+           'Halo: Divine Wind',
+           'Halo: Point of Light',
+           'Halo: The Rubicon Protocol',
+           'Halo: Epitaph'
+           ]
+    libro = random.choice(libros)
+    return libro
 
 def despedida(user_input):
     '''

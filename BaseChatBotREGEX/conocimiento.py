@@ -24,10 +24,10 @@ def conocimientoT():
             ],
             'respuesta': [
                 'Holaaaa',
-                'Hola, soy una IA de conversación sobre Halo.'
+                'Hola, soy la Halopedia.'
             ]
         },
-        #////////////////////////////////////////////////Chiste.
+        #////////////////////////////////////////////////Libro.
         {
             'intent': 'libro',
             'regex': [
@@ -38,7 +38,19 @@ def conocimientoT():
                 'Te podria gustar'
             ]
         },
-        #////////////////////////////////////////////////Chiste.
+        #////////////////////////////////////////////////Dato.
+        {
+            'intent': 'dato',
+            'regex': [
+                r'.*(dime|cuentame)+ (un dato|algo curioso)',
+            ],
+            'respuesta': [
+                'Sabias que',
+                'Un dato curioso es que',
+                'Te cuento que'
+            ]
+        },
+        #////////////////////////////////////////////////Estado.
         {
             'intent': 'estado',
             'regex': [

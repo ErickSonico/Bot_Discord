@@ -4,7 +4,7 @@
 
 import string, re, random, sys
 from conocimiento import conocimientoT
-from ResponseFunctions import recomendarLibro, despedida
+from ResponseFunctions import recomendarLibro, despedida, datoCurioso
 
 class ChatBot:
     """
@@ -75,6 +75,8 @@ class ChatBot:
             self.contexto = "LIBRO"
         elif intent == 'musica':
             self.contexto = "MUSICA"
+        elif intent == 'dato':
+            self.contexto = "DATO"
         elif intent == 'desconocido':
             self.contexto = "DEFAULT"  
 
@@ -109,6 +111,8 @@ class ChatBot:
         intent = caso['intent']
         if intent == 'libro':
             return recomendarLibro()
+        if intent == 'dato':
+            return datoCurioso()
         elif intent == 'musica':
             return poner_musica()
         elif intent == 'repetir':
@@ -131,6 +135,8 @@ class ChatBot:
             return 'Aquí va otro: ' + recomendarLibro()
         elif self.contexto == 'MUSICA':
             return 'Aquí va otro: ' + poner_musica()
+        elif self.contexto == 'DATO':
+            return 'Uno más: ' + datoCurioso()
         elif self.contexto == 'DEFAULT':
             return '¿Podrías tratar de expresarte mejor?'
         else:

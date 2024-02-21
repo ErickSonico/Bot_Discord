@@ -50,6 +50,18 @@ def conocimientoT():
                 'Te cuento que'
             ]
         },
+        #////////////////////////////////////////////////Juegos.
+        {
+            'intent': 'dato',
+            'regex': [
+                r'.*(dime|recomienda)+ (algun|mejor juego)',
+            ],
+            'respuesta': [
+                'Este es mi favorito',
+                'A la critica le gusta',
+                'Una buena historia la tiene'
+            ]
+        },
         #////////////////////////////////////////////////Estado.
         {
             'intent': 'estado',

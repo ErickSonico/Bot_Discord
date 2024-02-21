@@ -2,6 +2,27 @@ import os, time, string, random, re
 from random import randrange
 
 
+def recomendarJuego():
+    '''
+    Elige un juego de forma aleatoria.
+    
+    :return El juego
+    :rtype str
+    '''
+    juegos = ['Halo Wars',
+          'Halo Reach',
+          'Halo: Combat Evolved',
+          'Halo 2',
+          'Halo 3',
+          'Halo 3: ODST',
+          'Halo 4',
+          'Halo 5: Guardians',
+          'Halo Infinite',
+          'Halo Wars 2']
+    
+    juego = random.choice(juegos)
+    return juego
+
 def recomendarLibro():
     '''
     Eligue un libro de forma aleatoria.

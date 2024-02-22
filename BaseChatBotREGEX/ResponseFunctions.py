@@ -63,7 +63,7 @@ def recomendarLibro():
 
 def datoCurioso():
     '''
-    Eligue un dato curioso de forma aleatoria.
+    Elige un dato curioso de forma aleatoria.
 
     :return El dato curioso
     :rtype str
@@ -72,15 +72,38 @@ def datoCurioso():
              'los forerunners son una raza que se autodenominaba como los guardianes de la galaxia',
              'los San \'Shyuum formaron una alianza con la humanidad antigua para combatir a los forerunners hace miles de años',
              'los Prometeos son vida artificial creada para combatir al flood',
-             'Mendicant Bias es un constructo forerunner que se volvió en contra de su creador y ayudó al blood'
+             'Mendicant Bias es un constructo forerunner que se volvió en contra de su creador y ayudó al blood',
              'el equipo Noble estuvo compuesto por Spartan-III y Spartan-II',
              'los spartan se diseñaron para reprimir rebeliones en colonias humanas de otros mundos',
-             'el nombre del Novato en Halo 3: ODST es Jonathan'
-             'el planeta de donde vienen os Jiralhanae se llama Doisac'
+             'el nombre del Novato en Halo 3: ODST es Jonathan',
+             'el planeta de donde vienen os Jiralhanae se llama Doisac',
             ]
         
     dato = random.choice(datos)
     return dato
+
+def recomendarMusica():
+    '''
+    Elige una canción de forma aleatoria.
+    
+    :return link del soundtrack
+    :rtype str
+    '''
+    soundtracks =[
+        'https://www.youtube.com/watch?v=Nie2-3L37EY',
+        'https://www.youtube.com/watch?v=An43pufqcXY',
+        'https://www.youtube.com/watch?v=p4mRgxIYtE0',
+        'https://www.youtube.com/watch?v=aAKEdd_H0XY',
+        'https://www.youtube.com/watch?v=5asR5mcYJmU',
+        'https://www.youtube.com/watch?v=vDVDwgCQ6Qo',
+        'https://www.youtube.com/watch?v=YMKf6j-AFIQ',
+        'https://www.youtube.com/watch?v=kjmu5bj5yBA',
+        'https://www.youtube.com/watch?v=g_OAjpbXRj4',
+        'https://www.youtube.com/watch?v=Txraa3mELzw',
+        'https://www.youtube.com/watch?v=0-TgUJ09AU8'
+        ]
+    soundtrack = random.choice(soundtracks)
+    return soundtrack
 
 def despedida(user_input):
     '''
@@ -98,14 +121,3 @@ def despedida(user_input):
         if i in des:
             despedida_definitiva = random.choice(despedida_glados)
     return despedida_definitiva
-
-def recomendarMusica(): 
-    '''
-    Recomienda un cancion de Halo.
-
-    :return La cancion
-    :rtype str
-    '''
-        
-
-    return 

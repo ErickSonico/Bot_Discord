@@ -31,7 +31,7 @@ def conocimientoT():
         {
             'intent': 'libro',
             'regex': [
-                r'.*(recomienda)+ (un libro|una novela)',
+                r'.*(recomienda|recomendar)+ .*(libro|novela).*',
             ],
             'respuesta': [
                 'Te recomiendo',
@@ -42,7 +42,7 @@ def conocimientoT():
         {
             'intent': 'dato',
             'regex': [
-                r'.*(dime|cuentame)+ (un dato|algo curioso)',
+                r'.*(dime|cuentame|decirme)+ (un dato|algo curioso).*',
             ],
             'respuesta': [
                 'Sabias que',
@@ -54,7 +54,7 @@ def conocimientoT():
         {
             'intent': 'juego',
             'regex': [
-                r'.*(dime|recomiendame)+ (un juego)',
+                r'.*(dime|recomiendame)+.*(juego).*',
             ],
             'respuesta': [
                 'Este es mi favorito',
@@ -77,7 +77,7 @@ def conocimientoT():
         },
         #////////////////////////////////////////////////Emocion Negativa
         {
-            'intnet': 'negativo',
+            'intent': 'negativo',
             'regex': [
                 r'.* me siento (mal|triste|enojado|ansioso|perdido|solo)+',
                 r'.* no me siento (bien|feliz|a gusto|trnquilo)'
@@ -100,11 +100,11 @@ def conocimientoT():
                 'Bueno...'
             ]
         },
-        #////////////////////////////////////////////////Otro.
+        #////////////////////////////////////////////////Música.
         {
             'intent': 'musica',
             'regex': [
-                r'.*(pon|reproduce|toca|recomienda)+ (musica|una cancion)',
+                r'.*(pon.*|toc.*|recom.*)+.*(musica|cancion|soundtrack).*',
             ],
             'respuesta': [
                 'Ahí te va',

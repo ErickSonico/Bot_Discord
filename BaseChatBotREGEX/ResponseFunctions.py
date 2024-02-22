@@ -77,6 +77,10 @@ def datoCurioso():
              'los spartan se diseñaron para reprimir rebeliones en colonias humanas de otros mundos',
              'el nombre del Novato en Halo 3: ODST es Jonathan',
              'el planeta de donde vienen os Jiralhanae se llama Doisac',
+             'Después de la guerra, los Sangheili se unieron a la humanidad para formar una alianza',
+             'cuando el Covenant perdió la guerra, se dividió en facciones tales como La de Jul \'Mdama y Los Defensores de la Unica Libertad',
+             'los spartan II fueron secuestrados de sus hogares cuando eran niños para ser entrenados como supersoldados',
+             'el flood cuenta con una plaga logica que infecta sistemas de inteligencia artificial'
             ]
         
     dato = random.choice(datos)

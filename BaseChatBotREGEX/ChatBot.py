@@ -83,6 +83,8 @@ class ChatBot:
             self.contexto = "NEGATIVO"
         elif intent == "estado":
             self.contexto == "ESTADO"
+        elif intent == 'personaje':
+            self.contexto = "PERSONAJE"
         elif intent == 'desconocido':
             self.contexto = "DEFAULT"  
 
@@ -121,6 +123,8 @@ class ChatBot:
             return datoCurioso()
         elif intent == 'juego':
             return recomendarJuego()
+        elif intent == 'personaje':
+            return descripcionPersonaje(user_input)
         elif intent == 'repetir':
             return self.da_respuesta_apropiada(user_input)
         elif intent == 'terminar':
@@ -143,6 +147,8 @@ class ChatBot:
             return 'Aquí va otro: ' + recomendarJuego()
         elif self.contexto == 'DATO':
             return 'Uno más: ' + datoCurioso()
+        elif self.contexto == 'PERSONAJE':
+            return '¿Sobre que personaje quieres saber ahora?'
         elif self.contexto == 'DEFAULT':
             return '¿Podrías tratar de expresarte mejor?'
         else:

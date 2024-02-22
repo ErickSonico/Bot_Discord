@@ -31,7 +31,7 @@ def conocimientoT():
         {
             'intent': 'libro',
             'regex': [
-                r'.*(recomienda)+ (un libro|una novela)',
+                r'.*(recomiendame|recomienda)+ (un libro|una novela)',
             ],
             'respuesta': [
                 'Te recomiendo',
@@ -42,7 +42,7 @@ def conocimientoT():
         {
             'intent': 'dato',
             'regex': [
-                r'.*(dime|cuentame)+ (un dato|algo curioso)',
+                r'.*(dime|di|cuentame|cuenta)+ (un dato|algo curioso)',
             ],
             'respuesta': [
                 'Sabias que',
@@ -54,12 +54,24 @@ def conocimientoT():
         {
             'intent': 'juego',
             'regex': [
-                r'.*(dime|recomiendame)+ (un juego)',
+                r'.*(dime|di|recomiendame|recomienda)+ (un juego)',
             ],
             'respuesta': [
                 'Este es mi favorito',
                 'A la critica le gusta',
                 'Una buena historia la tiene'
+            ]
+        },
+        #////////////////////////////////////////////////Personajes.
+        {
+            'intent': 'personaje',
+            'regex': [
+                r'(.*)(|habla de|hablame de|quien es)+ (.*) (jefe maestro|cortana|inquisidor|noble 6|novato|johnson|halsey|spark|carter|kat|jun|emile|jorge|buck|locke|tanaka|vale)$',
+            ],
+            'respuesta': [
+                'Un personaje muy interesante:',
+                'Esta es una breve descripción sobre:',
+                'Te contaré sobre:'
             ]
         },
         #////////////////////////////////////////////////Estado.
@@ -93,8 +105,8 @@ def conocimientoT():
         {
             'intent': 'repetir',
             'regex': [
-                r'.*(cuentame|dime|saca)* otr(o|a).*',
-                r'.*otr(o|a).*',
+                r'.*(cuenta|cuentame|dime|di|saca)* (otro|otra).*',
+                r'.*(otro|otra)+.*',
             ],
             'respuesta': [
                 'Bueno...'
@@ -104,7 +116,7 @@ def conocimientoT():
         {
             'intent': 'musica',
             'regex': [
-                r'.*(pon|reproduce|toca|recomienda)+ (musica|una cancion)',
+                r'.*(pon|reproduce|toca|recomienda(me*))+ (musica|una cancion)',
             ],
             'respuesta': [
                 'Ahí te va',

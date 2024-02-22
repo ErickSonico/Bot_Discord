@@ -109,6 +109,10 @@ def recomendarMusica():
     soundtrack = random.choice(soundtracks)
     return soundtrack
 
+def contarHistoria():
+    # TODO: Poner historia de halo
+    return
+
 def despedida(user_input):
     '''
     Devuelve la despedida de glados

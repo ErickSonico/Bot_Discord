@@ -27,6 +27,18 @@ def conocimientoT():
                 'Hola, soy la Halopedia.'
             ]
         },
+        #////////////////////////////////////////////////Bienvenida.
+        {
+            'intent': 'historia',
+            'regex': [
+                r'.*(cual)?.* historia de (H|h)alo',
+                r'.**',
+            ],
+            'respuesta': [
+                'Toma asiento que estas apunto de escuchar una obra maestra ',
+                'Hmmm, vamos a ver si la recuerdo toda '
+            ]
+        },
         #////////////////////////////////////////////////Libro.
         {
             'intent': 'libro',

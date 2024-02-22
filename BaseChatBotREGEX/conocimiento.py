@@ -31,7 +31,7 @@ def conocimientoT():
         {
             'intent': 'libro',
             'regex': [
-                r'.*(recomiendame|recomienda)+ (un libro|una novela)',
+                r'.*(recomienda|recomendar)+ .*(libro|novela).*',
             ],
             'respuesta': [
                 'Te recomiendo',
@@ -42,7 +42,7 @@ def conocimientoT():
         {
             'intent': 'dato',
             'regex': [
-                r'.*(dime|di|cuentame|cuenta)+ (un dato|algo curioso)',
+                r'.*(dime|cu(e|é)ntame|decirme)+ (un dato|algo curioso).*',
             ],
             'respuesta': [
                 'Sabias que',
@@ -54,7 +54,7 @@ def conocimientoT():
         {
             'intent': 'juego',
             'regex': [
-                r'.*(dime|di|recomiendame|recomienda)+ (un juego)',
+                r'.*(dime|recomiendame)+.*(juego).*',
             ],
             'respuesta': [
                 'Este es mi favorito',
@@ -89,7 +89,7 @@ def conocimientoT():
         },
         #////////////////////////////////////////////////Emocion Negativa
         {
-            'intnet': 'negativo',
+            'intent': 'negativo',
             'regex': [
                 r'.* me siento (mal|triste|enojado|ansioso|perdido|solo)+',
                 r'.* no me siento (bien|feliz|a gusto|trnquilo)'
@@ -112,16 +112,17 @@ def conocimientoT():
                 'Bueno...'
             ]
         },
-        #////////////////////////////////////////////////Otro.
+        #////////////////////////////////////////////////Música.
         {
             'intent': 'musica',
             'regex': [
-                r'.*(pon|reproduce|toca|recomienda(me*))+ (musica|una cancion)',
+                r'.*(pon.*|toc.*|recom.*)+.*(m(u|ú)sica|canci(o|ó)n|soundtrack).*',
             ],
             'respuesta': [
-                'Ahí te va',
+                'Ahí te va:',
                 'Esta es mi favorita:',
-                'Aquí tienes'
+                'Aquí tienes:',
+                'Halopedia al servicio:'
             ]
         },
         #////////////////////////////////////////////////Fin.

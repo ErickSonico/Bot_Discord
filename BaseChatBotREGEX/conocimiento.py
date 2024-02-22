@@ -42,7 +42,7 @@ def conocimientoT():
         {
             'intent': 'dato',
             'regex': [
-                r'.*(dime|cuentame|decirme)+ (un dato|algo curioso).*',
+                r'.*(dime|cu(e|é)ntame|decirme)+ (un dato|algo curioso).*',
             ],
             'respuesta': [
                 'Sabias que',

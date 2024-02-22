@@ -104,12 +104,13 @@ def conocimientoT():
         {
             'intent': 'musica',
             'regex': [
-                r'.*(pon.*|toc.*|recom.*)+.*(musica|cancion|soundtrack).*',
+                r'.*(pon.*|toc.*|recom.*)+.*(m(u|ú)sica|canci(o|ó)n|soundtrack).*',
             ],
             'respuesta': [
-                'Ahí te va',
+                'Ahí te va:',
                 'Esta es mi favorita:',
-                'Aquí tienes'
+                'Aquí tienes:',
+                'Halopedia al servicio:'
             ]
         },
         #////////////////////////////////////////////////Fin.

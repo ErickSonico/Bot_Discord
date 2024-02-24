@@ -29,10 +29,20 @@ def conocimientoT():
         },
         #////////////////////////////////////////////////Bienvenida.
         {
+            'intent': 'raza',
+            'regex': [
+                r'.*(cual|cuentame)?.* historia de (H|h)alo',
+            ],
+            'respuesta': [
+                'Toma asiento que estas apunto de escuchar una obra maestra ',
+                'Hmmm, vamos a ver si la recuerdo toda '
+            ]
+        },
+        #////////////////////////////////////////////////Bienvenida.
+        {
             'intent': 'historia',
             'regex': [
-                r'.*(cual)?.* historia de (H|h)alo',
-                r'.**',
+                r'.*(cual|cuentame)?.* historia de (H|h)alo',
             ],
             'respuesta': [
                 'Toma asiento que estas apunto de escuchar una obra maestra ',

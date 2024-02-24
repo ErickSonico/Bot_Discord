@@ -83,6 +83,8 @@ class ChatBot:
             self.contexto = "MUSICA"
         elif intent == "negativo":
             self.contexto = "NEGATIVO"
+        elif intent == "historia":
+            self.contexto = "HISTORIA"
         elif intent == "estado":
             self.contexto == "ESTADO"
         elif intent == 'personaje':
@@ -127,6 +129,8 @@ class ChatBot:
             return recomendarMusica()
         elif intent == 'juego':
             return recomendarJuego()
+        elif intent == 'historia':
+            return contarHistoria()
         elif intent == 'personaje':
             return descripcionPersonaje(user_input)
         elif intent == 'repetir':

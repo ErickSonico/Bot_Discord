@@ -133,6 +133,7 @@ def descripcionPersonaje(user_input):
             personaje = key
         
     return personajes[personaje]
+
 def recomendarMusica():
     '''
     Elige una canción de forma aleatoria.
@@ -157,8 +158,13 @@ def recomendarMusica():
     return soundtrack
 
 def contarHistoria():
-    # TODO: Poner historia de halo
-    return
+    historiaHalo = 'En un futuro distante, la humanidad se encuentra en medio de una guerra desesperada contra una alianza alienígena conocida como los Covenant. En medio de este conflicto, emerge un héroe legendario conocido como el Jefe Maestro, un super soldado genéticamente mejorado.'\
+        'La historia comienza con el descubrimiento de un anillo artificial gigante llamado Halo, creado por una antigua civilización conocida como los Forerunners. Halo tiene el poder de destruir toda vida en la galaxia y los Covenant están obsesionados con activarlo.'\
+        'A lo largo de su viaje, el Jefe Maestro se enfrenta a innumerables desafíos, desde combates épicos contra las fuerzas Covenant hasta la lucha contra los Flood, una forma de vida parasitaria que amenaza con consumir toda la galaxia.'\
+        'Acompañado por la inteligencia artificial Cortana, el Jefe Maestro se embarca en una misión para detener a los Covenant, descubrir los secretos de Halo y los Forerunners, y proteger a la humanidad de la extinción.'\
+        'La historia de Halo es una epopeya de valor, sacrificio y determinación, que explora temas profundos como la guerra, la moralidad y el destino. A través de sus batallas y triunfos, el Jefe Maestro se convierte en un símbolo de esperanza y resistencia en un universo en guerra'\
+    
+    return historiaHalo
 
 def despedida(user_input):
     '''

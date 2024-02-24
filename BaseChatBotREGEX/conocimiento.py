@@ -31,11 +31,55 @@ def conocimientoT():
         {
             'intent': 'raza',
             'regex': [
-                r'.*(cual|cuentame)?.* historia de (H|h)alo',
+                r'.*(cuales|conoces|que).*(razas|especies|alienigenas).*',
             ],
             'respuesta': [
-                'Toma asiento que estas apunto de escuchar una obra maestra ',
-                'Hmmm, vamos a ver si la recuerdo toda '
+                'Existen varias de estas, por ejemplo tenemos',
+                'Justo tuve recientemente mi clase de taxonomia, ahi te van'
+            ]
+        },
+        #////////////////////////////////////////////////Bienvenida.
+        {
+            'intent': 'humano',
+            'regex': [
+                r'.*(que|hablame|cuentame).*(humano|humanos).*',
+            ],
+            'respuesta': [
+                'De ellos tengo la informacion siguiente ',
+                'Masomenos he escuchado esto sobre ellos'
+            ]
+        },
+        #////////////////////////////////////////////////Bienvenida.
+        {
+            'intent': 'forerunners',
+            'regex': [
+                r'.*(que|hablame|cuentame).*forerunners.*',
+            ],
+            'respuesta': [
+                'De ellos tengo la informacion siguiente ',
+                'Masomenos he escuchado esto sobre ellos'
+            ]
+        },
+        #////////////////////////////////////////////////Bienvenida.
+        {
+            'intent': 'flood',
+            'regex': [
+                r'.*(que|hablame|cuentame).*flood.*',
+            ],
+            'respuesta': [
+                'De ellos tengo la informacion siguiente ',
+                'Masomenos he escuchado esto sobre ellos'
+            ]
+        },
+        #////////////////////////////////////////////////Bienvenida.
+        {
+            'intent': 'covenant',
+            'regex': [
+                r'.*(que|hablame|cuentame).*covenant.*',
+            ],
+            'respuesta': [
+                'De ellos tengo la informacion siguiente ',
+                'Masomenos he escuchado esto sobre ellos'
             ]
         },
         #////////////////////////////////////////////////Bienvenida.

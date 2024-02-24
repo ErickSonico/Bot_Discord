@@ -85,6 +85,16 @@ class ChatBot:
             self.contexto = "NEGATIVO"
         elif intent == "historia":
             self.contexto = "HISTORIA"
+        elif intent == "raza":
+            self.contexto = "RAZA"
+        elif intent == "humano":
+            self.contexto = "HUMANO"
+        elif intent == "forerunners":
+            self.contexto = "FORERUNNERS"
+        elif intent == "covenant":
+            self.contexto = "COVENANT"
+        elif intent == "flood":
+            self.contexto = "FLOOD"
         elif intent == "estado":
             self.contexto == "ESTADO"
         elif intent == 'personaje':
@@ -131,6 +141,16 @@ class ChatBot:
             return recomendarJuego()
         elif intent == 'historia':
             return contarHistoria()
+        elif intent == 'raza':
+            return especies()
+        elif intent == 'humano':
+            return especies(user_input)
+        elif intent == 'forerunners':
+            return especies(user_input)
+        elif intent == 'covenant':
+            return especies(user_input)
+        elif intent == 'flood':
+            return especies(user_input)
         elif intent == 'personaje':
             return descripcionPersonaje(user_input)
         elif intent == 'repetir':

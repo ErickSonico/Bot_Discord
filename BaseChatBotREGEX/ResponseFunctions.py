@@ -182,3 +182,37 @@ def despedida(user_input):
         if i in des:
             despedida_definitiva = random.choice(despedida_glados)
     return despedida_definitiva
+
+def especies(user_input = '1'):
+    covenantInformacion = 'El Covenant es una alianza de razas alienígenas. Está formado por varias especies alienígenas que comparten una religión común y una jerarquía social estricta. Estas son algunas de las razas más destacadas dentro del Covenant:\n'\
+                '\t - Sangheili (Elites): Los Elites son una de las especies más prominentes y respetadas dentro del Covenant. Son guerreros hábiles y honorables que sirven como líderes militares y comandantes de las fuerzas Covenant.\n'\
+                '\t - Jiralhanae (Brutes): Los Brutes son una especie poderosa y agresiva que sirve como fuerza de choque en el Covenant. A menudo se enfrentan a los Elites en disputas de poder dentro de la jerarquía Covenant.\n'\
+                '\t - Kig-Yar (Jackals): Los Jackals son una raza astuta y oportunista que a menudo actúa como francotiradores o piratas dentro del Covenant. Son conocidos por su habilidad con armas de energía.\n'\
+                '\t - Unggoy (Grunts): Los Grunts son una raza más débil y menos inteligente que sirve como mano de obra y fuerza de choque en grandes números dentro del Covenant.\n'\
+                'Estas son solo algunas de las razas que componen el Covenant, que está unido por la creencia en los "Dioses Antiguos" (los Forerunners) y la búsqueda de tecnología y poder para llevar a cabo su Gran Viaje, que es su interpretación religiosa de activar los anillos Halo para ascender a un estado superior de existencia.'
+    
+    humanosInformacion = 'Son nativos del planeta Tierra y se han expandido por la galaxia, estableciendo colonias en diferentes planetas y sistemas solares. Los humanos son representados principalmente por la UNSC (United Nations Space Command),'\
+                ' una organización militar que lucha para proteger a la humanidad de la amenaza Covenant. La UNSC está equipada con tecnología avanzada, incluidas naves espaciales, armas de alta tecnología y armaduras de combate como la icónica armadura MJOLNIR usada por el Jefe Maestro.'
+    
+    forerunnersInformacion = 'Los Forerunners eran una especie alienígena avanzada y antigua en el universo. Eran conocidos por su tecnología avanzada, su cultura altamente desarrollada y su capacidad para construir estructuras y artefactos monumentales.'\
+                'Los Forerunners evolucionaron en un planeta llamado Ghibalb, ubicado en la galaxia de la Vía Láctea. A lo largo de su historia, desarrollaron una civilización altamente avanzada y próspera. Su tecnologia incluia armas, naves espaciales, '\
+                'inteligencias artificiales y estructuras gigantescas como los anillos Halo. Su tecnología era tan avanzada que a menudo se la consideraba mágica por otras razas menos desarrolladas. Los Forerunners mantenían relaciones con otras razas en la galaxia, '\
+                'incluidas las humanas, aunque estas relaciones a menudo eran complicadas y tensas debido a las diferencias culturales y tecnológicas.  Una de las mayores hazañas de los Forerunners fue su guerra contra los Flood lucharon desesperadamente, pero finalmente fueron derrotados.'\
+                'Como medida desesperada para contener la propagación de los Flood, los Forerunners construyeron los anillos Halo, enormes estructuras con el poder de destruir toda forma de vida en la galaxia. Estos anillos se activaron al final de la guerra contra los Flood, lo que llevó a la extinción de los Forerunners y muchas otras especies.'
+    
+    floodInformacion = 'El Flood es una forma de vida parasitaria y altamente peligrosa. Son una de las principales amenazas a la vida en la galaxia. Se cree que es el resultado de un organismo parasitario creado por una raza precursora como una herramienta para investigar la vida y la enfermedad. Sin embargo,'\
+                ' el Flood eventualmente se salió de control y se convirtió en una plaga galáctica. Este infecta a otras formas de vida, tomando el control de sus cuerpos y convirtiéndolos en formas de combate conocidas como formas de combate. El Flood también tiene formas de infección que pueden propagarse rápidamente y convertir a las víctimas en más Flood.'\
+                'El objetivo principal del Flood es consumir toda forma de vida en la galaxia para alimentar su crecimiento y propagación. Son una fuerza destructiva y voraz que no conoce límites en su búsqueda de nuevos huéspedes. Los Forerunners fueron los principales enemigos del Flood, librando una guerra desesperada para contener y detener su propagación.'\
+                ' Sin embargo, los Forerunners finalmente fueron derrotados y se vieron obligados a activar los anillos Halo como último recurso para detener al Flood, lo que resultó en la extinción de muchas formas de vida en la galaxia.'
+                
+    especies = {'humanos': humanosInformacion, 'covenant': covenantInformacion, 'forerunners':forerunnersInformacion, 'flood':floodInformacion, '': 'Perdon he tenido una fallo'}
+
+    if user_input == '1':        
+        return " ,".join(str(element) for element in list(especies.keys()))
+    else:
+        especie = ''
+        for key in list(especies.keys()):
+            if user_input.find(key) != -1:
+                especie = key
+                return especies[especie]
+        

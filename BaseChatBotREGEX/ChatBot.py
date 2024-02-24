@@ -79,6 +79,8 @@ class ChatBot:
             self.contexto = "JUEGO"
         elif intent == 'dato':
             self.contexto = "DATO"
+        elif intent == 'imagen':
+            self.contexto = "IMAGEN"
         elif intent == "musica":
             self.contexto = "MUSICA"
         elif intent == "negativo":
@@ -141,6 +143,8 @@ class ChatBot:
             return recomendarJuego()
         elif intent == 'historia':
             return contarHistoria()
+        elif intent == 'imagen':
+            return mostrarImagen(user_input)
         elif intent == 'raza':
             return especies()
         elif intent == 'humano':

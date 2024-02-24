@@ -81,6 +81,8 @@ def datoCurioso():
              'cuando el Covenant perdió la guerra, se dividió en facciones tales como La de Jul \'Mdama y Los Defensores de la Unica Libertad',
              'los spartan II fueron secuestrados de sus hogares cuando eran niños para ser entrenados como supersoldados',
              'el flood cuenta con una plaga logica que infecta sistemas de inteligencia artificial'
+             'los forerunners construyeron los anillos Halo para contener al flood',
+             'la primera vez que un brute venció a un spartan en un combate mano a mano fue en el arca donde pelearon Atriox y Jerome-092'
             ]
         
     dato = random.choice(datos)
@@ -89,6 +91,9 @@ def datoCurioso():
 def descripcionPersonaje(user_input):
     '''
     Devuelve la descripción del personaje elegido
+    :param str user_input: El texto escrito por el usuario
+    :return La descripción del personaje
+    :rtype str
     '''
     personajes = {
         
@@ -134,6 +139,59 @@ def descripcionPersonaje(user_input):
         
     return personajes[personaje]
 
+def mostrarImagen(user_input):
+    '''
+    Devuelve el enlace de la imagen del personaje o especie elegida
+    :param str user_input: El texto escrito por el usuario
+    :return La imagen del personaje o especie
+    :rtype str
+    '''
+    imagenes = {
+        'jefe maestro' : 'https://cdn.discordapp.com/attachments/1210856228163420250/1210856248883417098/Jefe_Maestro.jpeg?ex=65ec14c2&is=65d99fc2&hm=5bf50bca0f9bdeee360685b35a0cb16f3d948318e422d015056e41137177c55f&',
+        'cortana' : 'https://cdn.discordapp.com/attachments/1210856228163420250/1210856256248741908/Cortana.jpg?ex=65ec14c4&is=65d99fc4&hm=b32fed794ab32fb57728e31775fb44ef5e92d0697892c1cd3073c33cd62fdaca&',
+        'inquisidor' : 'https://cdn.discordapp.com/attachments/1210856228163420250/1210856264779829308/Inquisidor.png?ex=65ec14c6&is=65d99fc6&hm=24c04667dd31c8295d3701f12de311af63795126be86f243d4bf08b5fcfc7f08&',
+        'noble 6' : 'https://cdn.discordapp.com/attachments/1210856228163420250/1210856269972504646/Noble_Seis.jpg?ex=65ec14c7&is=65d99fc7&hm=e8dab66bb0c634be60e8bcd84013e8cf2dc84a5fef0a6a527a974860cd565eb8&',
+        'novato' : 'https://cdn.discordapp.com/attachments/1210856228163420250/1210856275760521266/Novato.webp?ex=65ec14c8&is=65d99fc8&hm=bd0403e52d6d046c2e29d7266876e2c200fa8f5f65605828cdb1e3977bd35893&',
+        'johnson' : 'https://cdn.discordapp.com/attachments/1210856228163420250/1210856285227196476/Jhonson.png?ex=65ec14cb&is=65d99fcb&hm=0a634dbe8163915353d313a748ddee4e4be6ad9626279644c818d54b0f20e12a&',
+        'halsey' : 'https://cdn.discordapp.com/attachments/1210856228163420250/1210856293766668358/Halsey.jpeg?ex=65ec14cd&is=65d99fcd&hm=29851cf93c956c71b267aa0d6c97a414139866ad172484f4cc084e3bf89abbc6&',
+        'spark' : 'https://cdn.discordapp.com/attachments/1210856228163420250/1210856305078829076/343_Guilty_Spark.jpeg?ex=65ec14cf&is=65d99fcf&hm=82c95bb39a3a17ab73c53414e8205ee0f57eafee4164215fd6186b15580d2578&',
+        'carter' : 'https://cdn.discordapp.com/attachments/1210856228163420250/1210856309659009064/Carter.jpeg?ex=65ec14d0&is=65d99fd0&hm=d0a333280ef8cc30f2408eed425255d787cdc79b3f996deb9da293d1494846d5&',
+        'kat' : 'https://cdn.discordapp.com/attachments/1210856228163420250/1210856325861605376/Kat.jpeg?ex=65ec14d4&is=65d99fd4&hm=233e8abc6a9a74b48b96c3f2f96dc0c7cdc0efdeb3008083f1c106833bb4fe24&',
+        'jun' : 'https://cdn.discordapp.com/attachments/1210856228163420250/1210856318592745492/June.jpeg?ex=65ec14d2&is=65d99fd2&hm=48a6e64e1ea6f8df8f4352bb0fa22263dd03aa1d4ad1c5d49ecc83a3a9275369&',
+        'emile' : 'https://cdn.discordapp.com/attachments/1210856228163420250/1210856349467156550/Emile.webp?ex=65ec14da&is=65d99fda&hm=8a75daa73783a787ec176517ac3d8ccb15fab7e6d2fa71ce03da5259bbe39649&',
+        'jorge' : 'https://cdn.discordapp.com/attachments/1210856228163420250/1210856359386415124/Jorge-052.webp?ex=65ec14dc&is=65d99fdc&hm=17a4a15b0e3c5eafba926825132e7f6ae6638aed36fa0c7d46a27e27cdc9fa22&',
+        'buck' : 'https://cdn.discordapp.com/attachments/1210856228163420250/1210856368261693500/Buck.webp?ex=65ec14de&is=65d99fde&hm=bdac576308f97090e7611c06bf5e13fd73b300e697c20ce714c5c20ab242745c&',
+        'locke' : 'https://cdn.discordapp.com/attachments/1210856228163420250/1210856375307997205/Spartan_Locke.jpeg?ex=65ec14e0&is=65d99fe0&hm=4fce2f96ba945fd4db83e78f71a28dd022fd8b7fadebb07fb90d14168332e566&',
+        'tanaka' : 'https://cdn.discordapp.com/attachments/1210856228163420250/1210856382354432050/Tanaka.jpeg?ex=65ec14e2&is=65d99fe2&hm=cddd196c575716a82fb83303cf42df610146fd94e493209a5e63ac3a372b7f23&',
+        'vale' : 'https://cdn.discordapp.com/attachments/1210856228163420250/1210856389837070436/Vale.jpeg?ex=65ec14e3&is=65d99fe3&hm=d17bee0ad1f4ed5424d8ad0d07ab7c9949417a63f467aed77f1ce0ff1d4016b9&',
+        'humanos' : 'https://cdn.discordapp.com/attachments/1210856228163420250/1210856402021519410/Humanos.jpeg?ex=65ec14e6&is=65d99fe6&hm=a96a8b93959c7e536dc1e87138ac6cdfb1926bced3f4c711a11792456c8e0dcd&',
+        'brutes' : 'https://cdn.discordapp.com/attachments/1210856228163420250/1210856410863112192/Brutes.jpg?ex=65ec14e8&is=65d99fe8&hm=f8a8ccb363601fae6e57f5af1596eb105a3432bd164960e28b57a22277e72cba&',
+        'jiralhanae' : 'https://cdn.discordapp.com/attachments/1210856228163420250/1210856410863112192/Brutes.jpg?ex=65ec14e8&is=65d99fe8&hm=f8a8ccb363601fae6e57f5af1596eb105a3432bd164960e28b57a22277e72cba&',
+        'kig-yar' : 'https://cdn.discordapp.com/attachments/1210856228163420250/1210856420078256138/Kig-Yar.jpg?ex=65ec14eb&is=65d99feb&hm=3c9cc0adfcc5dbd43a51a5f71f2b09caa43cd0b31d16050c7566e3f27d4a87fa&',
+        'jackals' : 'https://cdn.discordapp.com/attachments/1210856228163420250/1210856420078256138/Kig-Yar.jpg?ex=65ec14eb&is=65d99feb&hm=3c9cc0adfcc5dbd43a51a5f71f2b09caa43cd0b31d16050c7566e3f27d4a87fa&',
+        'sangheili' : 'https://cdn.discordapp.com/attachments/1210856228163420250/1210856428974116904/Sangheili.png?ex=65ec14ed&is=65d99fed&hm=4502a268ee284fafd20b71659b8a77fb9b55891078b7668de31340621d585028&',
+        'elites' : 'https://cdn.discordapp.com/attachments/1210856228163420250/1210856428974116904/Sangheili.png?ex=65ec14ed&is=65d99fed&hm=4502a268ee284fafd20b71659b8a77fb9b55891078b7668de31340621d585028&',
+        'yanme' : 'https://cdn.discordapp.com/attachments/1210856228163420250/1210856438214295562/Drone.png?ex=65ec14ef&is=65d99fef&hm=9cf288eb7befe51b35520e6887aae87c175e91a5ac8fa7ee76641c422718d409&',
+        'drones' : 'https://cdn.discordapp.com/attachments/1210856228163420250/1210856438214295562/Drone.png?ex=65ec14ef&is=65d99fef&hm=9cf288eb7befe51b35520e6887aae87c175e91a5ac8fa7ee76641c422718d409&',
+        'skirmishers' : 'https://cdn.discordapp.com/attachments/1210856228163420250/1210856448280502312/Skirmisher.png?ex=65ec14f1&is=65d99ff1&hm=faf5b36cde691e1d9e0984c21b725265a9ae16df712d93d8c23effc751e3833d&',
+        'huragok' : 'https://cdn.discordapp.com/attachments/1210856228163420250/1210856881388650577/Huragok.png?ex=65ec1559&is=65d9a059&hm=ccbe9f9fc96b1bbc4418dc30b4d602ef716c6214103cb39ecf179b2f7ebf795d&',
+        'hunters' : 'https://cdn.discordapp.com/attachments/1210856228163420250/1210856479330926652/Hunter.webp?ex=65ec14f9&is=65d99ff9&hm=c09371ae5fe50400a157e1689f518546b0e34aa501f37cde7a2feb387427acc0&',
+        'mgalekgolo' : 'https://cdn.discordapp.com/attachments/1210856228163420250/1210856479330926652/Hunter.webp?ex=65ec14f9&is=65d99ff9&hm=c09371ae5fe50400a157e1689f518546b0e34aa501f37cde7a2feb387427acc0&',
+        'grunts' : 'https://cdn.discordapp.com/attachments/1210856228163420250/1210856902167236668/Grunt.png?ex=65ec155e&is=65d9a05e&hm=0ea2bd278d91bba06d854b5ab8f0bee5d6c398bbe2df71b91a7de6342e57ce31&',
+        'unggoy' : 'https://cdn.discordapp.com/attachments/1210856228163420250/1210856902167236668/Grunt.png?ex=65ec155e&is=65d9a05e&hm=0ea2bd278d91bba06d854b5ab8f0bee5d6c398bbe2df71b91a7de6342e57ce31&',
+        'profetas' : 'https://cdn.discordapp.com/attachments/1210856228163420250/1210856909377376256/Profeta.jpeg?ex=65ec155f&is=65d9a05f&hm=b7cd77396f068350a284b975a67dc6ffa44e6895b53d8e5e4bd7dbb59d2ff224&',
+        'san \'shyum' : 'https://cdn.discordapp.com/attachments/1210856228163420250/1210856909377376256/Profeta.jpeg?ex=65ec155f&is=65d9a05f&hm=b7cd77396f068350a284b975a67dc6ffa44e6895b53d8e5e4bd7dbb59d2ff224&',
+        'flood' : 'https://cdn.discordapp.com/attachments/1210856228163420250/1210856336837967963/Flood.png?ex=65ec14d7&is=65d99fd7&hm=405b344173335078e2c7e58927a524c50ef3621f59dac327e79c28b9ae53f763&',
+
+    }
+
+    imagen = ''
+    for key in imagenes.keys():
+        if user_input.find(key) != -1:
+            imagen = key
+        
+    return imagenes[imagen]
+
 def recomendarMusica():
     '''
     Elige una canción de forma aleatoria.
@@ -158,11 +216,25 @@ def recomendarMusica():
     return soundtrack
 
 def contarHistoria():
-    historiaHalo = 'En un futuro distante, la humanidad se encuentra en medio de una guerra desesperada contra una alianza alienígena conocida como los Covenant. En medio de este conflicto, emerge un héroe legendario conocido como el Jefe Maestro, un super soldado genéticamente mejorado.'\
-        'La historia comienza con el descubrimiento de un anillo artificial gigante llamado Halo, creado por una antigua civilización conocida como los Forerunners. Halo tiene el poder de destruir toda vida en la galaxia y los Covenant están obsesionados con activarlo.'\
-        'A lo largo de su viaje, el Jefe Maestro se enfrenta a innumerables desafíos, desde combates épicos contra las fuerzas Covenant hasta la lucha contra los Flood, una forma de vida parasitaria que amenaza con consumir toda la galaxia.'\
-        'Acompañado por la inteligencia artificial Cortana, el Jefe Maestro se embarca en una misión para detener a los Covenant, descubrir los secretos de Halo y los Forerunners, y proteger a la humanidad de la extinción.'\
-        'La historia de Halo es una epopeya de valor, sacrificio y determinación, que explora temas profundos como la guerra, la moralidad y el destino. A través de sus batallas y triunfos, el Jefe Maestro se convierte en un símbolo de esperanza y resistencia en un universo en guerra'\
+    '''
+    Devuelve la historia de Halo
+    :return Historia de Halo
+    :rtyoe str
+    '''
+    historiaHalo = 'La historia inicia hace millones de años, con unos seres llamados Los Precursores, sabemos que eran una raza extremadamente avanzada. '\
+                    'Ellos crearon a todas las especies que conocemos. Los Precursores necesitaban herederos, y sus dos opciones eran los humanos y los forerunners. '\
+                    'Decidieron que los humanos tomarían su lugar, pero los forerunners, inconfromes, se rebelaron y los atacaron, ocasionando una guerra. '\
+                    'Los Precursores no ganaron esa batalla, de hecho, no opusieron mucha resistencia ya que tenian otros planes: '\
+                    'transofrmar sus cuerpos en polvo. Con el tiempo esta historia se convirtió en un mito. '\
+                    'Los humanos hallaron el polvo y se empezó a distribuir en el mercado negro como alimento para una raza de animales llamda pheru '\
+                    'que eran mascotas, y a veces alimento, para los humanos y los San \'Shyuum. Los pheru y aquellos que lo consumieron empezaron a mutar. '\
+                    'Las cosas se salieron de control y en poco tiempo los humanos entraron en guerra con un ejército de criaturas horripilantes. La infección era difícil de controlar, y el brote significaba que ese mundo estaba perdido'\
+                    ', por lo que los humanos empezaron a exterminar los planetas donde había brotes de lo que empezaron a llamar el flood. El problema fue que en algunos de esos planetas también había asentamientos forerunners, quienes tomaron esto '\
+                    'como una declaración de guerra. Los forerunners ganaron, pero se dieron cuenta de que la humanidad estaba luchando contra el flood. '\
+                    'Los forerunners, construyeron los Halo, que tenían la capacidad de destruir toda forma de vida en la galaxia capaz de albergar al parásito. '\
+                    'Antes de la activación, los forerunners recolectaron muestras de vida de todas las especies de la galaxia para que siglos después estas fueran trasladadas '\
+                    'a sus planetas de origen y así repoblar la galaxia. Después de esto empieza la historia como la conocemos.\nEs el siglo 26 y la humanidad vuelve a viajar por las estrellas '\
+                    'aquí empieza la historia de los juegos.'
     
     return historiaHalo
 
@@ -184,6 +256,12 @@ def despedida(user_input):
     return despedida_definitiva
 
 def especies(user_input = '1'):
+    '''
+    Devuelve la información de las especies de Halo
+    :param str user_input: El texto escrito por el usuario
+    :return La información de las especies
+    :rtype str
+    '''
     covenantInformacion = 'El Covenant es una alianza de razas alienígenas. Está formado por varias especies alienígenas que comparten una religión común y una jerarquía social estricta. Estas son algunas de las razas más destacadas dentro del Covenant:\n'\
                 '\t - Sangheili (Elites): Los Elites son una de las especies más prominentes y respetadas dentro del Covenant. Son guerreros hábiles y honorables que sirven como líderes militares y comandantes de las fuerzas Covenant.\n'\
                 '\t - Jiralhanae (Brutes): Los Brutes son una especie poderosa y agresiva que sirve como fuerza de choque en el Covenant. A menudo se enfrentan a los Elites en disputas de poder dentro de la jerarquía Covenant.\n'\

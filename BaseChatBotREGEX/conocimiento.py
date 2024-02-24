@@ -20,73 +20,73 @@ def conocimientoT():
             'intent': 'bienvenida',
             'regex': [
                 r'.*hola.*',
-                r'.*buen(a|o)s (dias|tardes|noches).*',
+                r'.*buen(a|o)s (d(i|í)as|tardes|noches).*',
             ],
             'respuesta': [
                 'Holaaaa',
                 'Hola, soy la Halopedia.'
             ]
         },
-        #////////////////////////////////////////////////Bienvenida.
+        #////////////////////////////////////////////////Esepcies.
         {
             'intent': 'raza',
             'regex': [
-                r'.*(cuales|conoces|que).*(razas|especies|alienigenas).*',
+                r'.*(cu(a|á)les|conoces|que).*(razas|especies|alien(i|í)genas).*',
             ],
             'respuesta': [
                 'Existen varias de estas, por ejemplo tenemos',
                 'Justo tuve recientemente mi clase de taxonomia, ahi te van'
             ]
         },
-        #////////////////////////////////////////////////Bienvenida.
+        #////////////////////////////////////////////////Humanos.
         {
             'intent': 'humano',
             'regex': [
-                r'.*(que|hablame|cuentame).*(humano|humanos).*',
+                r'.*(que|h(a|á)blame|cu(e|é)ntame).*(humano|humanos).*',
             ],
             'respuesta': [
                 'De ellos tengo la informacion siguiente ',
                 'Masomenos he escuchado esto sobre ellos'
             ]
         },
-        #////////////////////////////////////////////////Bienvenida.
+        #////////////////////////////////////////////////Forerunners.
         {
             'intent': 'forerunners',
             'regex': [
-                r'.*(que|hablame|cuentame).*forerunners.*',
+                r'.*(que|h(a|á)blame|cu(e|é)ntame).*forerunners.*',
             ],
             'respuesta': [
                 'De ellos tengo la informacion siguiente ',
                 'Masomenos he escuchado esto sobre ellos'
             ]
         },
-        #////////////////////////////////////////////////Bienvenida.
+        #////////////////////////////////////////////////Flood.
         {
             'intent': 'flood',
             'regex': [
-                r'.*(que|hablame|cuentame).*flood.*',
+                r'.*(que|h(a|á)blame|cu(e|é)ntame).*flood.*',
             ],
             'respuesta': [
                 'De ellos tengo la informacion siguiente ',
                 'Masomenos he escuchado esto sobre ellos'
             ]
         },
-        #////////////////////////////////////////////////Bienvenida.
+        #////////////////////////////////////////////////Covenant.
         {
             'intent': 'covenant',
             'regex': [
-                r'.*(que|hablame|cuentame).*covenant.*',
+                r'.*(que|h(a|á)blame|cu(e|é)ntame).*covenant.*',
             ],
             'respuesta': [
                 'De ellos tengo la informacion siguiente ',
                 'Masomenos he escuchado esto sobre ellos'
             ]
         },
-        #////////////////////////////////////////////////Bienvenida.
+        #////////////////////////////////////////////////Historia.
         {
             'intent': 'historia',
             'regex': [
-                r'.*(cual|cuentame)?.* historia de (H|h)alo',
+                r'.*(cu(a|á)l|cu(e|é)ntame)?.* historia de (H|h)alo.*',
             ],
             'respuesta': [
                 'Toma asiento que estas apunto de escuchar una obra maestra ',
@@ -128,11 +128,24 @@ def conocimientoT():
                 'Una buena historia la tiene'
             ]
         },
+        #////////////////////////////////////////////////Imagen.
+        {
+            'intent': 'imagen',
+            'regex': [
+                r'.*(muestrame|ens(e|é)ñame|quiero ver|imagen|foto)+.*(jefe maestro|cortana|inquisidor|noble 6|novato|johnson|halsey|spark|carter|kat|jun|emile|jorge|buck|locke|tanaka|vale).*',
+                r'.*(muestrame|ens(e|é)ñame|quiero ver|imagen|foto)+.*(jiralhanae|brutes|kig-yar|jackals|sangheili|elites|yanme|drones|skirmishers|huragok|hunters|mgalekgolo|grunts|unggoy|profetas|san \'shyum|flood).*'
+            ],
+            'respuesta': [
+                'Aquí tienes:',
+                'Claro:',
+                'Halopedia al servicio:'
+            ]
+        },
         #////////////////////////////////////////////////Personajes.
         {
             'intent': 'personaje',
             'regex': [
-                r'(.*)(|habla de|hablame de|quien es)+ (.*) (jefe maestro|cortana|inquisidor|noble 6|novato|johnson|halsey|spark|carter|kat|jun|emile|jorge|buck|locke|tanaka|vale)$',
+                r'(.*)(|habla de|hablame de|quien es)+ (.*) (jefe maestro|cortana|inquisidor|noble 6|novato|johnson|halsey|spark|carter|kat|jun|emile|jorge|buck|locke|tanaka|vale)+.*',
             ],
             'respuesta': [
                 'Un personaje muy interesante:',
@@ -147,10 +160,10 @@ def conocimientoT():
                 r'^(que tal|como)? (estas|te sientes).*',
             ],
             'respuesta': [
-                'Feliz de poder compartir contigo mi conocimiento, sobre el basto universo de Halo',
+                'Feliz de poder compartir contigo mi conocimiento sobre el basto universo de Halo',
                 'Emocionado de poder hablar sobre Halo',
-                'Compartir mi conocimiento sobre Halo me hacen muy feliz',
-                'Si crece tu conocimiento sobre Halo mi proposito se habra cumplido'
+                'Compartir mi conocimiento sobre Halo me hace muy feliz',
+                'Si crece tu conocimiento sobre Halo mi propósito se habrá cumplido'
             ]
         },
         #////////////////////////////////////////////////Emocion Negativa
@@ -162,8 +175,8 @@ def conocimientoT():
             ],
             'respuesta': [
                 'Mi conocimiento sobre Halo debe de animarte',
-                'No debes de sentirte asi, jugar Halo te animara',
-                'Hablar sobre Halo te hara feliz',
+                'No debes de sentirte así, jugar Halo te animará',
+                'Hablar sobre Halo te hará feliz',
                 'Ese sentimineto se debe de erradicar con mi concomiento sobre Halo'
             ]
         },
